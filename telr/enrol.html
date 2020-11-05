@@ -1,0 +1,13 @@
+<div align="center">
+
+<p><?php print_string('paymentrequired'); ?></p>
+<p><b><?php echo $instancename; ?></b></p>
+<p><b><?php echo get_string('cost').": {$localisedcost}"." SAR"; ?></b></p>
+<p><img style="width:200px;height:50px;" alt="<?php print_string('telr:accepted', 'telr'); ?>" src="<?php echo $CFG->wwwroot . '/enrol/telr/TelrMethods.png'; ?>" /></p>
+<form action="<?php echo $CFG->wwwroot . '/enrol/telr/create_a_bill.php'; ?>" method="POST">
+  <input type="hidden" value="<?php echo $instance->id; ?>" name="instance_id">
+  <input type="hidden" value="<?php echo $course->id; ?>" name="course_id">
+  <input type="submit" class="btn btn-outline-dark" value="شراء الأن" />
+</form>
+
+</div>
